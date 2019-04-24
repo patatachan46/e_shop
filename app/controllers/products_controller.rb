@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :pay]
 
   # GET /products
   # GET /products.json
@@ -61,6 +61,18 @@ class ProductsController < ApplicationController
     end
   end
 
+  def pay
+    Payjp.api_key = 'sk_test_c62fade9d045b54cd76d7036'
+    charge = Payjp::Charge.create(
+      :amount => @product.price,
+      :card => params['payjp-token'],
+      :currency => 'jpy',
+    )
+    redirect_to @product, notice: 'ありがとうございました。'
+  end
+end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -71,4 +83,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :price, :stock, :note)
     end
-end
+
