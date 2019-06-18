@@ -1,24 +1,12 @@
-# README
+Name
+====
+Railsでクレカ決済付きECサイトを作ってみよう！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Description
+Ruby on Railsの学習で使用したサイト。<br>
 
-* Ruby version
+参考サイト：　 Railsでクレカ決済付きECサイトを作ってみよう！</br>
+サイトURL： 　https://www.m3tech.blog/entry/2017/10/05/103507</br>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+内容：　Ruby on Railsを使って簡単なECサイトを作成。
